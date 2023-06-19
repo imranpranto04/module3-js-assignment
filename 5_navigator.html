@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigator</title>
+  </head>
+  <body>
+    <h1>Browser Info</h1>
+    <button onclick="displayBrowserInfo()">Get Browser Info</button>
+    <div id="browser-info"></div>
+
+    <script>
+      function getBrowserInfo() {
+        const browserName = navigator.userAgent;
+        const browserVersion = navigator.appVersion;
+        const browserPlatform = navigator.platform;
+
+        return {
+          name: browserName,
+          version: browserVersion,
+          platform: browserPlatform,
+        };
+      }
+
+      function displayBrowserInfo() {
+        const browserInfo = getBrowserInfo();
+        const infoContainer = document.getElementById("browser-info");
+
+        infoContainer.innerHTML = `Browser Name: ${browserInfo.name}<br>Browser Version: ${browserInfo.version}<br> Browser Platform: ${browserInfo.platform}`;
+      }
+    </script>
+  </body>
+</html>

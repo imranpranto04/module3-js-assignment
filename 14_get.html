@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax Get</title>
+  </head>
+  <body>
+    <h1>AJAX Get Request Example</h1>
+
+    <button onclick="getData()">Ajax GET Request</button>
+
+    <script src="js/axios.min.js"></script>
+
+    <script>
+      async function getData() {
+        let res = await axios.get("https://api.example.com/data");
+        if (res.status == 200) {
+          let resultData = res.data;
+          console.log(resultData);
+        } else {
+          console.log("error");
+        }
+      }
+    </script>
+  </body>
+</html>

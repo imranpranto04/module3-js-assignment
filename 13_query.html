@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Query Selector</title>
+  </head>
+  <body>
+    <style>
+      .highlight {
+        color: red;
+      }
+    </style>
+
+    <h1>Select Paragraphs by Class Example</h1>
+    <p class="highlight_paragraph">This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p class="highlight_paragraph">This is the third paragraph.</p>
+    <button onclick="highlightParagraphs()">Highlight Paragraphs</button>
+
+    <script>
+      function highlightParagraphs() {
+        const paragraphs = document.querySelectorAll(".highlight_paragraph");
+        paragraphs.forEach(function (item) {
+          item.classList.add("highlight");
+        });
+      }
+    </script>
+  </body>
+</html>

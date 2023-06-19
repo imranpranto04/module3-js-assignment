@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Element and Append element</title>
+  </head>
+  <body>
+    <h1>Create Element</h1>
+    <button onclick="getElement()">Create Element</button>
+    <ul id="ulList"></ul>
+
+    <script>
+      function getElement() {
+        const ul = document.getElementById("ulList");
+
+        for (let i = 1; i <= 5; i++) {
+          const li = document.createElement("li");
+          li.innerText = i;
+
+          ul.appendChild(li);
+        }
+      }
+    </script>
+  </body>
+</html>

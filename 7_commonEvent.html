@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Event</title>
+  </head>
+  <body
+    onclick="displayClickCoordinates(event)"
+    onkeydown="displayKeyCode(event)"
+  >
+    <h1>Webpage Functionality</h1>
+    <p>Click anywhere on the page to display the click coordinates.</p>
+    <p>Press any key on the keyboard to display the key code.</p>
+    <img
+      src="https://img.freepik.com/free-photo/web-design-technology-browsing-programming-concept_53876-163260.jpg?w=2000"
+      onmouseover="changeImageSource(event)"
+      style="width: 600px"
+    />
+    <script>
+      function displayClickCoordinates(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        alert("Coordinates: (" + x + ", " + y + ")");
+      }
+
+      function displayKeyCode(event) {
+        const keyCode = event.keyCode || event.which;
+        alert("Key Code: " + keyCode);
+      }
+
+      function changeImageSource(event) {
+        const image = event.target;
+        image.src =
+          "https://www.newgenapps.com/hubfs/Imported_Blog_Media/Website-Design-Background-Feb-09-2022-03-13-55-73-AM.png";
+      }
+    </script>
+  </body>
+</html>

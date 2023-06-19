@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Value</title>
+  </head>
+  <body>
+    <h1>Change Image Attribute</h1>
+    <button onclick="changeImageSource()">Change Image Attribute</button>
+    <br />
+    <br />
+
+    <img
+      id="myImage"
+      src="https://images.pexels.com/photos/931007/pexels-photo-931007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      alt="Initial Image"
+      style="width: 600px"
+    />
+
+    <script>
+      function changeImageSource() {
+        const image = document.getElementById("myImage");
+        image.src =
+          "https://img.freepik.com/free-photo/lone-tree_181624-46361.jpg?w=1380&t=st=1687171634~exp=1687172234~hmac=5f85fae9a955a3f1f0f0bd3dd587846a6efb23217d61a3e5a85670f420a4ae0e";
+      }
+    </script>
+  </body>
+</html>

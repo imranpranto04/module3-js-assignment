@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manipulate Class Css</title>
+  </head>
+  <body>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+
+    <h1>Manipulate CSS Class</h1>
+    <button onclick="addHighlightClass()">Add Class</button>
+    <p id="text">This is a paragraph element.</p>
+
+    <script>
+      function addHighlightClass() {
+        const paragraphText = document.getElementById("text");
+        paragraphText.classList.add("highlight");
+      }
+    </script>
+  </body>
+</html>
